@@ -8,6 +8,7 @@
 @import 'components/resources.css';
 @import 'components/needle-basics.css';
 @import 'components/home.css';
+@import 'components/responsive.css';
 
 :root {
     --primary-blue: #A8D8FF;

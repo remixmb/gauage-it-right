@@ -9,6 +9,11 @@
 <body>
     <header>
         <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="needle-basics.html">Needle Basics</a></li>
@@ -29,5 +34,19 @@
     </footer>
 
     <script type="module" src="../js/{{PAGE_SCRIPT}}.js"></script>
+
+    <div class="floating-nav">
+        <button class="floating-nav-btn" aria-label="Quick navigation">
+            <svg><!-- Add navigation icon --></svg>
+        </button>
+        <div class="floating-nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="needle-basics.html">Needle Basics</a>
+            <a href="gauge-selector.html">Gauge Selector</a>
+            <a href="resources.html">Resources</a>
+        </div>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>

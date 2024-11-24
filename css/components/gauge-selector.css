@@ -90,4 +90,28 @@ select:focus {
     .gauge-size {
         font-size: 2.5rem;
     }
+
+    /* Larger touch targets for form elements */
+    select, 
+    button,
+    .type-btn {
+        min-height: 48px;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    /* Add space between form groups */
+    .form-group {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    /* Make dropdowns full width */
+    select {
+        width: 100%;
+    }
+
+    /* Improve form labels readability */
+    label {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-xs);
+    }
 } 
