@@ -1,0 +1,15 @@
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    background-color: var(--primary-purple);
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
