@@ -76,8 +76,8 @@
 
 /* Layout */
 .needle-basics-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
 }
@@ -107,142 +107,6 @@
 }
 
 /* Needle visualization */
-.needle-visualization {
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg);
-    background: rgba(216, 181, 255, 0.1);
-    border-radius: 1rem;
-}
-
-.comparison-container {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-md);
-    padding: var(--spacing-lg);
-}
-
-.needle-example {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.needle-example .needle {
-    width: 4px;
-    background: var(--primary-purple);
-    border-radius: 2px;
-    transition: height 0.3s ease;
-}
-
-.needle-example .label {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-/* Gauge cards */
-.gauge-cards {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.gauge-card {
-    background: white;
-    border-radius: 1rem;
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
-    border-left: 4px solid var(--primary-purple);
-}
-
-.gauge-card h3 {
-    color: var(--text-color);
-    margin-bottom: var(--spacing-sm);
-}
-
-.tags {
-    display: flex;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-md);
-}
-
-.tag {
-    background: var(--gradient-bg);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.9rem;
-}
-
-/* Length visualization */
-.needle-length-section {
-    background: white;
-    border-radius: 1.5rem;
-    padding: var(--spacing-xl);
-    box-shadow: var(--shadow-lg);
-}
-
-.length-visualization {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
-}
-
-.length-comparison {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 200px;
-    padding: var(--spacing-lg);
-    background: rgba(216, 181, 255, 0.1);
-    border-radius: 1rem;
-}
-
-.needle-length {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.needle-length .needle {
-    width: 4px;
-    background: var(--gradient-bg);
-    border-radius: 2px;
-}
-
-.needle-length.subq .needle { height: 16mm; }
-.needle-length.im .needle { height: 25mm; }
-.needle-length.im-long .needle { height: 38mm; }
-
-.needle-length span {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-.length-info {
-    padding: var(--spacing-lg);
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-    .needle-basics-layout,
-    .length-visualization {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .comparison-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .needle-visualization {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-lg);
@@ -283,29 +147,54 @@
     box-shadow: var(--shadow-lg);
 }
 
+.length-visualization {
+    background: rgba(216, 181, 255, 0.1);
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    min-height: 200px;
+}
+
 .length-comparison {
     display: flex;
     justify-content: center;
     gap: var(--spacing-xl);
-    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
 }
 
-.needle-length {
+.needle-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-sm);
+    position: relative;
+    width: 100px;
 }
 
-.needle-length .needle {
+.needle {
     width: 4px;
     background: var(--gradient-bg);
     border-radius: 2px;
+    margin-bottom: 60px;
 }
 
-.needle-length.subq .needle { height: 16mm; }
-.needle-length.im .needle { height: 25mm; }
-.needle-length.im-long .needle { height: 38mm; }
+.needle.subq { height: 16mm; }
+.needle.im { height: 25mm; }
+.needle.im-long { height: 38mm; }
+
+.measurement {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-top: var(--spacing-sm);
+}
+
+.label {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    margin-top: var(--spacing-xs);
+}
 
 .gauge-slider {
     background: white;
@@ -419,4 +308,14 @@ input[type="range"]::-webkit-slider-thumb {
     opacity: 0.8;
     margin-top: var(--spacing-xl);
     font-family: 'Inter', sans-serif;
+}
+
+.medical-disclaimer {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
 } 

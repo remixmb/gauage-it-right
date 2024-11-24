@@ -40,28 +40,25 @@
                         <input type="range" min="18" max="27" step="1" value="18" id="gaugeRange">
                         <div class="current-gauge">18G</div>
                         
-                        <!-- Updated gauge visualization -->
                         <div class="gauge-visualization">
                             <div class="gauge-bars">
-                                <div class="gauge-bar-labels">
-                                    <span>Selected Gauge</span>
-                                    <span>Reference (18G)</span>
-                                </div>
-                                <div class="gauge-bar-container">
-                                    <div class="selected-gauge bar"></div>
-                                    <div class="reference-gauge bar"></div>
+                                <div class="gauge-bar-group">
+                                    <div class="bar-container">
+                                        <div class="selected-gauge bar"></div>
+                                        <span class="gauge-label">Selected Gauge</span>
+                                    </div>
+                                    <div class="bar-container">
+                                        <div class="reference-gauge bar"></div>
+                                        <span class="gauge-label">Reference (18G)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="gauge-info">
+                            <!-- This will be populated by JavaScript -->
+                        </div>
                     </div>
-
-                    <div class="gauge-info">
-                        <h3>18G Needle Information</h3>
-                        <p><strong>Common Use:</strong> <span id="commonUse">Drawing thick medications only</span></p>
-                        <p><strong>Flow Rate:</strong> <span id="flowRate">Very fast flow rate, largest needle size</span></p>
-                    </div>
-
-                    <p class="gauge-reminder">Remember: Lower gauge numbers (18G) mean larger needles, higher numbers (27G) mean smaller needles</p>
                 </div>
 
                 <!-- Information Section -->
@@ -99,24 +96,36 @@
             <!-- Length Comparison Section -->
             <div class="needle-length-section">
                 <h2>Needle Length Guide</h2>
+                <p class="section-intro">A visual comparison of common needle lengths used for different injection types.</p>
+                
                 <div class="length-visualization">
                     <div class="length-comparison">
-                        <div class="needle-length subq">
-                            <div class="needle"></div>
-                            <span>5/8" (16mm)<br>SubQ</span>
+                        <div class="needle-column">
+                            <div class="needle-container">
+                                <div class="needle subq"></div>
+                            </div>
+                            <span class="measurement">16mm</span>
+                            <span class="label">SubQ (5/8")</span>
                         </div>
-                        <div class="needle-length im">
-                            <div class="needle"></div>
-                            <span>1" (25mm)<br>IM Standard</span>
+                        <div class="needle-column">
+                            <div class="needle-container">
+                                <div class="needle im"></div>
+                            </div>
+                            <span class="measurement">25mm</span>
+                            <span class="label">IM Standard (1")</span>
                         </div>
-                        <div class="needle-length im-long">
-                            <div class="needle"></div>
-                            <span>1.5" (38mm)<br>IM Long</span>
+                        <div class="needle-column">
+                            <div class="needle-container">
+                                <div class="needle im-long"></div>
+                            </div>
+                            <span class="measurement">38mm</span>
+                            <span class="label">IM Long (1.5")</span>
                         </div>
                     </div>
-                    <div class="length-info">
-                        <p>Needle length is crucial for proper injection depth. SubQ needles are shorter for shallow fat layer injections, while IM needles need to reach muscle tissue.</p>
-                    </div>
+                </div>
+                
+                <div class="medical-disclaimer">
+                    <p>Note: Needle length is crucial for proper injection depth. SubQ needles are shorter for shallow fat layer injections, while IM needles need to reach muscle tissue. Always consult with your healthcare provider for specific recommendations based on your individual needs.</p>
                 </div>
             </div>
         </div>
