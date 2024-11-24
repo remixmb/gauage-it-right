@@ -44,6 +44,12 @@ export class GaugeSlider {
         const updateGaugeInfo = (value) => {
             gaugeSize.textContent = `${value}G`;
             const data = gaugeData[value];
+            
+            if (!data) {
+                console.warn(`No data found for gauge size ${value}`);
+                return;
+            }
+            
             gaugeTitle.textContent = data.title;
             gaugeDescription.textContent = data.description;
             usageTags.innerHTML = data.tags
