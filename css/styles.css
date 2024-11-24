@@ -4,10 +4,10 @@
 /* Import component styles */
 @import 'components/navigation.css';
 @import 'components/gauge-slider.css';
-@import 'components/injection-guide.css';
 @import 'components/gauge-selector.css';
 @import 'components/resources.css';
 @import 'components/needle-basics.css';
+@import 'components/home.css';
 
 :root {
     --primary-blue: #A8D8FF;
@@ -37,16 +37,23 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
     background: var(--gradient-bg);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 2.5rem;
 }
 
 h2 {
@@ -77,9 +84,8 @@ section {
 /* Add to existing styles */
 .content-container {
     max-width: 1200px;
-    margin: 80px auto 0;
+    margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-lg);
-    min-height: calc(100vh - 160px); /* account for nav and footer */
 }
 
 .info-section {

@@ -12,8 +12,6 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="needle-basics.html" class="active">Needle Basics</a></li>
-                <li><a href="estrogen-guide.html">Estrogen Guide</a></li>
-                <li><a href="testosterone-guide.html">Testosterone Guide</a></li>
                 <li><a href="gauge-selector.html">Gauge Selector</a></li>
                 <li><a href="resources.html">Resources</a></li>
             </ul>
@@ -25,82 +23,80 @@
             <h1>Understanding Needle Gauges</h1>
             
             <div class="needle-basics-layout">
+                <!-- Interactive Gauge Section -->
                 <div class="gauge-slider-section">
                     <h2>Interactive Gauge Guide</h2>
                     <p class="section-intro">Move the slider to explore different needle sizes and their uses.</p>
                     <div id="gauge-slider"></div>
+                    
+                    <div class="needle-visualization">
+                        <h3>Size Comparison</h3>
+                        <div class="comparison-container">
+                            <div class="needle-example" id="currentNeedle">
+                                <div class="needle"></div>
+                                <span class="label">Selected Gauge</span>
+                            </div>
+                            <div class="needle-example reference">
+                                <div class="needle"></div>
+                                <span class="label">Reference (18G)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Information Section -->
                 <div class="gauge-info-section">
-                    <h2>About Needle Gauges</h2>
-                    <p class="section-intro">The gauge number indicates the needle's diameter - the higher the number, the thinner the needle.</p>
-                    
+                    <h2>Common Uses</h2>
                     <div class="gauge-cards">
                         <div class="gauge-card">
-                            <h4>18-20 Gauge (Large Drawing Needles)</h4>
-                            <ul>
-                                <li>Diameter: 1.27mm - 0.91mm</li>
-                                <li>Common lengths: 1" (25mm), 1.5" (38mm)</li>
-                                <li>Primary use: Drawing thick medications</li>
-                                <li>Example: Drawing testosterone cypionate</li>
-                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333604/">Clinical Practice Guidelines for Drawing Medications (2017)</a></li>
-                            </ul>
+                            <h3>Drawing Needles (18-22G)</h3>
+                            <p>Used to draw medication from vials. Larger diameter allows for faster drawing and reduces vacuum pressure in the vial.</p>
+                            <div class="tags">
+                                <span class="tag">Drawing</span>
+                                <span class="tag">Vial Access</span>
+                            </div>
                         </div>
-
                         <div class="gauge-card">
-                            <h4>21-23 Gauge (Standard IM Injection)</h4>
-                            <ul>
-                                <li>Diameter: 0.82mm - 0.64mm</li>
-                                <li>Common lengths: 1" (25mm), 1.5" (38mm)</li>
-                                <li>Primary use: Intramuscular injections</li>
-                                <li>Example: Testosterone IM injection</li>
-                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/books/NBK556106/">Intramuscular Injection Techniques (2022)</a></li>
-                            </ul>
+                            <h3>IM Injection (21-25G)</h3>
+                            <p>For intramuscular injections. Provides good control and comfort while being strong enough to penetrate muscle tissue.</p>
+                            <div class="tags">
+                                <span class="tag">Intramuscular</span>
+                                <span class="tag">Deep Tissue</span>
+                            </div>
                         </div>
-
                         <div class="gauge-card">
-                            <h4>25-27 Gauge (Fine Needles)</h4>
-                            <ul>
-                                <li>Diameter: 0.51mm - 0.41mm</li>
-                                <li>Common lengths: 5/8" (16mm), 1/2" (13mm)</li>
-                                <li>Primary use: Subcutaneous injections</li>
-                                <li>Example: Estradiol valerate SubQ injection</li>
-                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4744327/">Subcutaneous Injection Guidelines (2020)</a></li>
-                            </ul>
+                            <h3>SubQ Injection (25-27G)</h3>
+                            <p>For subcutaneous injections. Smaller diameter reduces discomfort and is perfect for shallow injections.</p>
+                            <div class="tags">
+                                <span class="tag">Subcutaneous</span>
+                                <span class="tag">Shallow</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="detailed-info-section">
-                <h2>Detailed Gauge Reference</h2>
-                <div class="needle-length-guide">
-                    <h3>Needle Length Guidelines</h3>
-                    <table>
-                        <tr>
-                            <th>Injection Type</th>
-                            <th>Body Mass</th>
-                            <th>Recommended Length</th>
-                            <th>Source</th>
-                        </tr>
-                        <tr>
-                            <td>IM (Thigh)</td>
-                            <td>Normal-Average</td>
-                            <td>1" (25mm)</td>
-                            <td rowspan="2">WHO Guidelines (2020)</td>
-                        </tr>
-                        <tr>
-                            <td>IM (Thigh)</td>
-                            <td>Higher BMI</td>
-                            <td>1.5" (38mm)</td>
-                        </tr>
-                        <tr>
-                            <td>SubQ</td>
-                            <td>All</td>
-                            <td>5/8" (16mm)</td>
-                            <td>CDC Injection Guide</td>
-                        </tr>
-                    </table>
+            <!-- Length Comparison Section -->
+            <div class="needle-length-section">
+                <h2>Needle Length Guide</h2>
+                <div class="length-visualization">
+                    <div class="length-comparison">
+                        <div class="needle-length subq">
+                            <div class="needle"></div>
+                            <span>5/8" (16mm)<br>SubQ</span>
+                        </div>
+                        <div class="needle-length im">
+                            <div class="needle"></div>
+                            <span>1" (25mm)<br>IM Standard</span>
+                        </div>
+                        <div class="needle-length im-long">
+                            <div class="needle"></div>
+                            <span>1.5" (38mm)<br>IM Long</span>
+                        </div>
+                    </div>
+                    <div class="length-info">
+                        <p>Needle length is crucial for proper injection depth. SubQ needles are shorter for shallow fat layer injections, while IM needles need to reach muscle tissue.</p>
+                    </div>
                 </div>
             </div>
         </div>

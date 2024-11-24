@@ -12,8 +12,6 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="needle-basics.html">Needle Basics</a></li>
-                <li><a href="estrogen-guide.html">Estrogen Guide</a></li>
-                <li><a href="testosterone-guide.html">Testosterone Guide</a></li>
                 <li><a href="gauge-selector.html" class="active">Gauge Selector</a></li>
                 <li><a href="resources.html">Resources</a></li>
             </ul>
@@ -25,22 +23,31 @@
             <h1>Find Your Ideal Needle Gauge</h1>
             <div class="selector-container">
                 <div class="selector-form">
-                    <h2>What are you using the needle for?</h2>
-                    <select id="needleUse">
-                        <option value="">Select purpose...</option>
-                        <option value="drawing">Drawing medication</option>
-                        <option value="injecting-im">Injecting (Intramuscular)</option>
-                        <option value="injecting-subq">Injecting (Subcutaneous)</option>
-                    </select>
+                    <div class="form-group">
+                        <h2>What are you using the needle for?</h2>
+                        <select id="needleUse">
+                            <option value="">Select purpose...</option>
+                            <option value="drawing">Drawing medication</option>
+                            <option value="injecting-im">Injecting (Intramuscular)</option>
+                            <option value="injecting-subq">Injecting (Subcutaneous)</option>
+                        </select>
+                    </div>
 
-                    <h2>Which medication?</h2>
-                    <select id="medicationType">
-                        <option value="">Select medication...</option>
-                        <option value="estrogen">Estrogen</option>
-                        <option value="testosterone">Testosterone</option>
-                    </select>
+                    <div class="form-group">
+                        <h2>Which medication?</h2>
+                        <select id="medicationType">
+                            <option value="">Select medication...</option>
+                            <option value="estrogen">Estrogen</option>
+                            <option value="testosterone">Testosterone</option>
+                        </select>
+                    </div>
                 </div>
+                
                 <div id="recommendation-result"></div>
+                
+                <div class="selector-info">
+                    <p>Recommendations are based on standard medical guidelines and common practices. Always consult with your healthcare provider for personalized advice.</p>
+                </div>
             </div>
         </div>
     </main>

@@ -16,14 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getRecommendation(use, medication) {
-        // Add recommendation logic based on selections
         const recommendations = {
-            'drawing-testosterone': '18-20G',
-            'drawing-estrogen': '20-22G',
-            'injecting-im-testosterone': '21-23G',
-            'injecting-im-estrogen': '22-25G',
-            'injecting-subq-testosterone': '25-27G',
-            'injecting-subq-estrogen': '25-27G'
+            'drawing-testosterone': {
+                gauge: '18-20G',
+                details: 'Ideal for drawing thick testosterone oil'
+            },
+            'drawing-estrogen': {
+                gauge: '20-22G',
+                details: 'Perfect for drawing estradiol valerate'
+            },
+            'injecting-im-testosterone': {
+                gauge: '21-23G',
+                details: 'Comfortable for IM testosterone injection'
+            },
+            'injecting-im-estrogen': {
+                gauge: '22-25G',
+                details: 'Optimal for IM estrogen delivery'
+            },
+            'injecting-subq-testosterone': {
+                gauge: '25-27G',
+                details: 'Best for SubQ testosterone injection'
+            },
+            'injecting-subq-estrogen': {
+                gauge: '25-27G',
+                details: 'Perfect for SubQ estrogen delivery'
+            }
         };
 
         const key = `${use}-${medication}`;
@@ -34,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDiv.innerHTML = `
             <div class="recommendation-card">
                 <h3>Recommended Needle Gauge</h3>
-                <p class="gauge-size">${recommendation}</p>
-                <p class="description">This size is optimal for your needs.</p>
+                <p class="gauge-size">${recommendation.gauge}</p>
+                <p class="description">${recommendation.details}</p>
             </div>
         `;
     }

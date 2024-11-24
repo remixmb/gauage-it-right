@@ -87,7 +87,7 @@
 .gauge-info-section {
     background: white;
     border-radius: 1.5rem;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     box-shadow: var(--shadow-lg);
 }
 
@@ -98,56 +98,211 @@
     font-size: 1.1rem;
 }
 
-/* Gauge slider container modifications */
+/* Gauge slider container */
 #gauge-slider {
     background: linear-gradient(to right, rgba(168, 216, 255, 0.1), rgba(216, 181, 255, 0.1));
     border-radius: 1rem;
     padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
-/* Detailed info section */
-.detailed-info-section {
+/* Needle visualization */
+.needle-visualization {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: rgba(216, 181, 255, 0.1);
+    border-radius: 1rem;
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-lg);
+}
+
+.needle-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.needle-example .needle {
+    width: 4px;
+    background: var(--primary-purple);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.needle-example .label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Gauge cards */
+.gauge-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.gauge-card {
+    background: white;
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary-purple);
+}
+
+.gauge-card h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tags {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.tag {
+    background: var(--gradient-bg);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Length visualization */
+.needle-length-section {
     background: white;
     border-radius: 1.5rem;
     padding: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
     box-shadow: var(--shadow-lg);
 }
 
-/* Section headers */
-.content-container h2 {
-    color: var(--text-color);
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-md);
-    position: relative;
+.length-visualization {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
 }
 
-.content-container h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
+.length-comparison {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    padding: var(--spacing-lg);
+    background: rgba(216, 181, 255, 0.1);
+    border-radius: 1rem;
+}
+
+.needle-length {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.needle-length .needle {
+    width: 4px;
     background: var(--gradient-bg);
-    margin-top: var(--spacing-xs);
     border-radius: 2px;
+}
+
+.needle-length.subq .needle { height: 16mm; }
+.needle-length.im .needle { height: 25mm; }
+.needle-length.im-long .needle { height: 38mm; }
+
+.needle-length span {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.length-info {
+    padding: var(--spacing-lg);
 }
 
 /* Responsive design */
 @media (max-width: 1024px) {
-    .needle-basics-layout {
+    .needle-basics-layout,
+    .length-visualization {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
     }
 }
 
 @media (max-width: 768px) {
-    .content-container {
-        padding: var(--spacing-md);
+    .comparison-container {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .gauge-slider-section,
-    .gauge-info-section,
-    .detailed-info-section {
-        padding: var(--spacing-md);
-    }
-} 
+}
+
+.needle-visualization {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+}
+
+.needle-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.needle-example::before {
+    content: '';
+    display: block;
+    width: 4px;
+    background: var(--primary-purple);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.needle-length-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.length-comparison {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+.needle-length {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.needle-length .needle {
+    width: 4px;
+    background: var(--gradient-bg);
+    border-radius: 2px;
+}
+
+.needle-length.subq .needle { height: 16mm; }
+.needle-length.im .needle { height: 25mm; }
+.needle-length.im-long .needle { height: 38mm; } 
