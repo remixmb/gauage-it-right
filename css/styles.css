@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* Import component styles */
 @import 'components/navigation.css';
 @import 'components/gauge-slider.css';
@@ -9,6 +12,15 @@
     --primary-green: #B5FFD8;
     --text-color: #333333;
     --background-color: #FFFFFF;
+    --gradient-bg: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-blue) 100%);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
 }
 
 /* Global styles */
@@ -25,8 +37,36 @@ body {
     background-color: var(--background-color);
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
 /* Layout styles */
 section {
-    padding: 2rem;
+    padding: var(--spacing-xl);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#home {
+    text-align: center;
+    background: var(--gradient-bg);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: var(--spacing-xl);
 } 
