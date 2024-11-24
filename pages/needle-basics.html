@@ -27,21 +27,41 @@
                 <div class="gauge-slider-section">
                     <h2>Interactive Gauge Guide</h2>
                     <p class="section-intro">Move the slider to explore different needle sizes and their uses.</p>
-                    <div id="gauge-slider"></div>
                     
-                    <div class="needle-visualization">
-                        <h3>Size Comparison</h3>
-                        <div class="comparison-container">
-                            <div class="needle-example" id="currentNeedle">
-                                <div class="needle"></div>
-                                <span class="label">Selected Gauge</span>
-                            </div>
-                            <div class="needle-example reference">
-                                <div class="needle"></div>
-                                <span class="label">Reference (18G)</span>
+                    <div class="gauge-slider">
+                        <div class="gauge-marks">
+                            <span>18G</span>
+                            <span>20G</span>
+                            <span>22G</span>
+                            <span>23G</span>
+                            <span>25G</span>
+                            <span>27G</span>
+                        </div>
+                        <input type="range" min="18" max="27" step="1" value="18" id="gaugeRange">
+                        <div class="current-gauge">18G</div>
+                        
+                        <!-- Updated gauge visualization -->
+                        <div class="gauge-visualization">
+                            <div class="gauge-bars">
+                                <div class="gauge-bar-labels">
+                                    <span>Selected Gauge</span>
+                                    <span>Reference (18G)</span>
+                                </div>
+                                <div class="gauge-bar-container">
+                                    <div class="selected-gauge bar"></div>
+                                    <div class="reference-gauge bar"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gauge-info">
+                        <h3>18G Needle Information</h3>
+                        <p><strong>Common Use:</strong> <span id="commonUse">Drawing thick medications only</span></p>
+                        <p><strong>Flow Rate:</strong> <span id="flowRate">Very fast flow rate, largest needle size</span></p>
+                    </div>
+
+                    <p class="gauge-reminder">Remember: Lower gauge numbers (18G) mean larger needles, higher numbers (27G) mean smaller needles</p>
                 </div>
 
                 <!-- Information Section -->
