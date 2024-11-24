@@ -1,122 +1,32 @@
 .gauge-slider-container {
-    background: white;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    padding: var(--spacing-xl);
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gauge-slider-container:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.gauge-slider {
-    width: 100%;
-    padding: 1rem;
+    background: transparent;
+    padding: var(--spacing-md);
 }
 
 .slider {
     width: 100%;
-    height: 10px;
-    -webkit-appearance: none;
+    margin: var(--spacing-lg) 0;
+    height: 8px;
     background: var(--gradient-bg);
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-    border-radius: 5px;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border: 3px solid var(--primary-purple);
-    box-shadow: var(--shadow-sm);
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: white;
-    border: 2px solid var(--primary-purple);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.gauge-display {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-    gap: 2rem;
-}
-
-#gaugeSize {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--text-color);
-    min-width: 80px;
-}
-
-.needle-visualization {
-    flex-grow: 1;
-    position: relative;
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-.needle-outer {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #eee;
-    transform: translateY(-50%);
-}
-
-.needle-inner {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    background: var(--primary-blue);
-    transform: translateY(-50%);
-    transition: height 0.3s ease;
 }
 
 .gauge-info {
-    background: rgba(168, 216, 255, 0.1);
-    padding: var(--spacing-lg);
+    background: white;
+    border: 1px solid rgba(168, 216, 255, 0.3);
     border-radius: 1rem;
-    margin-top: var(--spacing-lg);
-    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
 .usage-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1rem;
+    margin-top: var(--spacing-sm);
 }
 
 .tag {
-    background: var(--gradient-bg);
-    color: white;
-    font-weight: 500;
+    font-size: 0.9rem;
     padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: 2rem;
-    box-shadow: var(--shadow-sm);
 }
 
 /* ... rest of gauge slider styles ... */

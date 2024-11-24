@@ -1,0 +1,65 @@
+.selector-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.selector-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.selector-form h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.selector-form select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--primary-purple);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-form select:hover {
+    border-color: var(--primary-blue);
+}
+
+.selector-form select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(216, 181, 255, 0.3);
+}
+
+.recommendation-card {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(168, 216, 255, 0.1), rgba(216, 181, 255, 0.1));
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.recommendation-card h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.gauge-size {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+    margin: var(--spacing-md) 0;
+}
+
+.description {
+    color: var(--text-color);
+    font-size: 1.1rem;
+} 

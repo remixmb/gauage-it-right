@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauge Selector - Gauge It Right</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="needle-basics.html">Needle Basics</a></li>
+                <li><a href="estrogen-guide.html">Estrogen Guide</a></li>
+                <li><a href="testosterone-guide.html">Testosterone Guide</a></li>
+                <li><a href="gauge-selector.html" class="active">Gauge Selector</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <h1>Find Your Ideal Needle Gauge</h1>
+            <div class="selector-container">
+                <div class="selector-form">
+                    <h2>What are you using the needle for?</h2>
+                    <select id="needleUse">
+                        <option value="">Select purpose...</option>
+                        <option value="drawing">Drawing medication</option>
+                        <option value="injecting-im">Injecting (Intramuscular)</option>
+                        <option value="injecting-subq">Injecting (Subcutaneous)</option>
+                    </select>
+
+                    <h2>Which medication?</h2>
+                    <select id="medicationType">
+                        <option value="">Select medication...</option>
+                        <option value="estrogen">Estrogen</option>
+                        <option value="testosterone">Testosterone</option>
+                    </select>
+                </div>
+                <div id="recommendation-result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created with love for the trans community</p>
+    </footer>
+
+    <script type="module" src="../js/pages/gauge-selector.js"></script>
+</body>
+</html> 

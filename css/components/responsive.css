@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+    .content-container {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .selector-container {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .selector-form select {
+        font-size: 0.9rem;
+    }
+
+    .gauge-size {
+        font-size: 2rem;
+    }
+
+    .resource-card {
+        margin: 0 var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: var(--spacing-md) var(--spacing-xs);
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .recommendation-card {
+        padding: var(--spacing-md);
+    }
+} 

@@ -1,0 +1,153 @@
+.gauge-details {
+    margin-top: var(--spacing-xl);
+}
+
+.gauge-card {
+    background: white;
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary-purple);
+}
+
+.gauge-card h4 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.gauge-card ul {
+    list-style: none;
+    padding-left: var(--spacing-md);
+}
+
+.gauge-card ul li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+}
+
+.gauge-card ul li:before {
+    content: "•";
+    color: var(--primary-purple);
+    position: absolute;
+    left: -1rem;
+}
+
+.needle-length-guide {
+    margin-top: var(--spacing-xl);
+    background: white;
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.needle-length-guide table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+}
+
+.needle-length-guide th,
+.needle-length-guide td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.needle-length-guide th {
+    background: var(--gradient-bg);
+    color: white;
+}
+
+.needle-length-guide tr:hover {
+    background: rgba(216, 181, 255, 0.1);
+}
+
+.gauge-card a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gauge-card a:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.needle-basics-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Section styling */
+.gauge-slider-section,
+.gauge-info-section {
+    background: white;
+    border-radius: 1.5rem;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-intro {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+/* Gauge slider container modifications */
+#gauge-slider {
+    background: linear-gradient(to right, rgba(168, 216, 255, 0.1), rgba(216, 181, 255, 0.1));
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+}
+
+/* Detailed info section */
+.detailed-info-section {
+    background: white;
+    border-radius: 1.5rem;
+    padding: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Section headers */
+.content-container h2 {
+    color: var(--text-color);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.content-container h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-bg);
+    margin-top: var(--spacing-xs);
+    border-radius: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .needle-basics-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: var(--spacing-md);
+    }
+    
+    .gauge-slider-section,
+    .gauge-info-section,
+    .detailed-info-section {
+        padding: var(--spacing-md);
+    }
+} 

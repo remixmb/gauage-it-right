@@ -23,10 +23,85 @@
     <main>
         <div class="content-container">
             <h1>Understanding Needle Gauges</h1>
-            <div id="gauge-slider"></div>
-            <div class="info-section">
-                <h2>About Needle Gauges</h2>
-                <p>The gauge number indicates the needle's diameter - the higher the number, the thinner the needle.</p>
+            
+            <div class="needle-basics-layout">
+                <div class="gauge-slider-section">
+                    <h2>Interactive Gauge Guide</h2>
+                    <p class="section-intro">Move the slider to explore different needle sizes and their uses.</p>
+                    <div id="gauge-slider"></div>
+                </div>
+
+                <div class="gauge-info-section">
+                    <h2>About Needle Gauges</h2>
+                    <p class="section-intro">The gauge number indicates the needle's diameter - the higher the number, the thinner the needle.</p>
+                    
+                    <div class="gauge-cards">
+                        <div class="gauge-card">
+                            <h4>18-20 Gauge (Large Drawing Needles)</h4>
+                            <ul>
+                                <li>Diameter: 1.27mm - 0.91mm</li>
+                                <li>Common lengths: 1" (25mm), 1.5" (38mm)</li>
+                                <li>Primary use: Drawing thick medications</li>
+                                <li>Example: Drawing testosterone cypionate</li>
+                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333604/">Clinical Practice Guidelines for Drawing Medications (2017)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="gauge-card">
+                            <h4>21-23 Gauge (Standard IM Injection)</h4>
+                            <ul>
+                                <li>Diameter: 0.82mm - 0.64mm</li>
+                                <li>Common lengths: 1" (25mm), 1.5" (38mm)</li>
+                                <li>Primary use: Intramuscular injections</li>
+                                <li>Example: Testosterone IM injection</li>
+                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/books/NBK556106/">Intramuscular Injection Techniques (2022)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="gauge-card">
+                            <h4>25-27 Gauge (Fine Needles)</h4>
+                            <ul>
+                                <li>Diameter: 0.51mm - 0.41mm</li>
+                                <li>Common lengths: 5/8" (16mm), 1/2" (13mm)</li>
+                                <li>Primary use: Subcutaneous injections</li>
+                                <li>Example: Estradiol valerate SubQ injection</li>
+                                <li>Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4744327/">Subcutaneous Injection Guidelines (2020)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-info-section">
+                <h2>Detailed Gauge Reference</h2>
+                <div class="needle-length-guide">
+                    <h3>Needle Length Guidelines</h3>
+                    <table>
+                        <tr>
+                            <th>Injection Type</th>
+                            <th>Body Mass</th>
+                            <th>Recommended Length</th>
+                            <th>Source</th>
+                        </tr>
+                        <tr>
+                            <td>IM (Thigh)</td>
+                            <td>Normal-Average</td>
+                            <td>1" (25mm)</td>
+                            <td rowspan="2">WHO Guidelines (2020)</td>
+                        </tr>
+                        <tr>
+                            <td>IM (Thigh)</td>
+                            <td>Higher BMI</td>
+                            <td>1.5" (38mm)</td>
+                        </tr>
+                        <tr>
+                            <td>SubQ</td>
+                            <td>All</td>
+                            <td>5/8" (16mm)</td>
+                            <td>CDC Injection Guide</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
