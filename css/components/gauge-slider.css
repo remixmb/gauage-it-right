@@ -7,4 +7,106 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.gauge-slider {
+    width: 100%;
+    padding: 1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 25px;
+    -webkit-appearance: none;
+    background: var(--primary-purple);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 12px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 2px solid var(--primary-purple);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 2px solid var(--primary-purple);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gauge-display {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+#gaugeSize {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    min-width: 80px;
+}
+
+.needle-visualization {
+    flex-grow: 1;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.needle-outer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #eee;
+    transform: translateY(-50%);
+}
+
+.needle-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: var(--primary-blue);
+    transform: translateY(-50%);
+    transition: height 0.3s ease;
+}
+
+.gauge-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.usage-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    background: var(--primary-green);
+    font-size: 0.875rem;
+}
+
 /* ... rest of gauge slider styles ... */

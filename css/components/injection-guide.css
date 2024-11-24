@@ -1,0 +1,76 @@
+.injection-guide-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.injection-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.type-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-purple);
+    background: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-btn.active {
+    background: var(--primary-purple);
+    color: white;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.warning {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 0.25rem;
+}
+
+.injection-sites-map {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
